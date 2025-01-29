@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    // variables
+    bool num1 = 1 , num2 = 1;
+
+    // the result
+    cout << num1 << " And " << num2 << " = " << ( num1 && num2 );
+
+    return 0;
+}
