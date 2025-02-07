@@ -1,16 +1,14 @@
 #include <iostream>
 using namespace std;
-
-void number()
-{
-    for (int num = 1 ; num <= 100 ; num++)
-    {
-        cout << num << endl;
-    }
-}
-
 int main()
 {
-    number();
+    int num, factorial = 1;
+    cout << "please enter your number :\n";
+    cin >> num;
+    for (int i = 1; i <= num; i++)
+    {
+        factorial *= i;
+    }
+    cout << factorial;
     return 0;
 }

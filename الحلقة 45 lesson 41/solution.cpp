@@ -19,11 +19,6 @@ void read_person(person &information)
     cin >> information.phone;
 }
 
-void ReadPerson(person information[2])
-{
-    read_person(information[0]);
-    read_person(information[1]);
-}
 
 void print_person(person information)
 {
@@ -33,6 +28,11 @@ void print_person(person information)
     cout << "Age : " << information.age << " Years.\n";
     cout << "phone : " << information.phone << ".\n";
     cout << "*************************" << endl;
+}
+void ReadPerson(person information[2])
+{
+    read_person(information[0]);
+    read_person(information[1]);
 }
 
 void PrintPerson(person information[2])

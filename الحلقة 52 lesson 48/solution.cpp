@@ -19,17 +19,6 @@ void read_person(person &information)
     cin >> information.phone;
 }
 
-void ReadPerson(person information[100] , int &length)
-{
-    cout << "how many persons ?\n";
-    cin >> length;
-    for (int i = 0; i <= length - 1; i++)
-    {
-        cout << "please enter person " << i + 1 << " info : \n";
-        read_person(information [i]);
-    }
-}
-
 void print_person(person information)
 {
     cout << "*************************\n";
@@ -39,18 +28,31 @@ void print_person(person information)
     cout << "phone : " << information.phone << ".\n";
     cout << "*************************" << endl;
 }
+void ReadPerson(person information[100] ,int &length)
+{
+    cout << "Enter the number of people you want to enter : ";
+    cin >> length;
 
-void PrintPerson(person information , int &length)
+    for (int i = 0; i <= length - 1; i++)
+    {
+        cout << "please enter person's " << i + 1 << " info : \n";
+        read_person(information[i]);
+    }
+}
+
+void PrintPerson(person information[100] , int length)
 {
     for (int i = 0; i <= length - 1; i++)
     {
-        print_person(information [i]);
+        print_person(information[i]);
     }
 }
 
 int main()
 {
-    ReadPerson(information[i]);
+    int length = 0;
+    person information[100];
+    ReadPerson(information , length);
     PrintPerson(information , length);
     return 0;
 }
